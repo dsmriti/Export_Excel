@@ -31,6 +31,6 @@ export class AppComponent {
   dataSource = ELEMENT_DATA;
   constructor(public excel:ExcelService){}
   exportAsXLSX(){
-   this.excel.exportAsExcelFile(this.dataSource, "test")
+   this.excel.exportAsExcelFile(this.dataSource, "Table_Export_")
   }
 }

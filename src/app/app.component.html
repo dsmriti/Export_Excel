@@ -8,36 +8,25 @@
     margin: 0;
   }
 
-  .spacer {
-    flex: 1;
-  }
-
   .toolbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
     height: 60px;
     display: flex;
     align-items: center;
     background-color: #1976d2;
     color: white;
+    justify-content: center;
     font-weight: 600;
   }
-  .toolbar img {
-    margin: 0 16px;
-  }
+  
   .content {
     padding: 0 80px;
-    margin: 90px 0 0 0;
+    margin: 20px 0 0 0;
   }
 </style>
 
 <!-- Toolbar -->
-<div class="toolbar" role="banner">
-  
-  <span>Welcome</span>
-    <div class="spacer"></div>
+<div class="toolbar">
+  <h2>Export to Excel via npm xlsx</h2>
 </div>
 
 <div class="content" role="main">
@@ -69,10 +58,7 @@
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
   </mat-table>
-  <div>
-    <div style="text-align: center;"><img src="assets/exporttable.png" (click)="exportAsXLSX()" class="export"/>
-      <div style="font-size: 11px;">Export Table</div> </div>
-  </div> 
-
+    <div><img src="assets/exporttable.png" (click)="exportAsXLSX()" class="export"/></div>
+    <span style="float: left;font-size: 12px;">Export Table</span>
 </div>
 <router-outlet></router-outlet>
