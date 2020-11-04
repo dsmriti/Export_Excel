@@ -1,0 +1,9 @@
+table {
+    width: 100%;
+}
+.export{
+    float: left;
+    width: 2.4rem;
+    padding: 10px;
+    cursor: pointer;
+}
